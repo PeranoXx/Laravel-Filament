@@ -13,7 +13,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-
+use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
 class MerchantResource extends Resource
 {
     protected static ?string $model = Merchant::class;
@@ -54,6 +54,7 @@ class MerchantResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
+                ExportBulkAction::make('export')
             ]);
     }
     

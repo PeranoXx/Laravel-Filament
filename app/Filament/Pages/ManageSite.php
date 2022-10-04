@@ -21,7 +21,7 @@ class ManageSite extends SettingsPage
             TextInput::make('site_name')
                 ->required(),
             FileUpload::make('site_logo')
-                ->avatar()
+                ->avatar()->required()
         ];
     }
 }
