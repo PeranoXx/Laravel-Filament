@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProductResource\Pages;
+use App\Filament\Resources\ProductResource\Widgets\ProductOverview;
 use App\Models\Product;
 use Closure;
 use Filament\Forms\Components\Card;
@@ -14,6 +15,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -21,14 +23,25 @@ use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Support\Str;
-use Illuminate\Database\Eloquent\Model;
+use Konnco\FilamentSafelyDelete\Tables\Actions\RevertableDeleteAction;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
+use Webbingbrasil\FilamentAdvancedFilter\Filters\BooleanFilter;
+use Webbingbrasil\FilamentAdvancedFilter\Filters\DateFilter;
+use Webbingbrasil\FilamentAdvancedFilter\Filters\NumberFilter;
+use Webbingbrasil\FilamentAdvancedFilter\Filters\TextFilter;
 
 class ProductResource extends Resource
 {
+    use Translatable;
     protected static ?string $navigationGroup = 'Shop';
     protected static ?string $model = Product::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-lightning-bolt';
+
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'es'];
+    }
 
     public static function form(Form $form): Form
     {
@@ -96,20 +109,28 @@ class ProductResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('image'),
-                TextColumn::make('name'),
-                TextColumn::make('amount')->prefix('₹'),
-                TextColumn::make('discount_amount')->prefix('₹'),
-                TextColumn::make('discount')->suffix('%'),
-                TextColumn::make('brand.name'),
+                TextColumn::make('name')->searchable()->sortable(),
+                TextColumn::make('amount')->prefix('₹')->sortable(),
+                TextColumn::make('discount_amount')->prefix('₹')->sortable()->toggleable(),
+                TextColumn::make('discount')->suffix('%')->sortable()->toggleable(),
+                TextColumn::make('brand.name')->searchable()->sortable()->toggleable(),
+                TextColumn::make('created_at')->toggleable(),
             ])->defaultSort('created_at', 'desc')
             ->filters([
-                //
+                // SelectFilter::make('brand')->relationship('brand', 'name'),
+                BooleanFilter::make('is_visible'),
+                DateFilter::make('created_at'),
+                NumberFilter::make('amount'),
+                TextFilter::make('name')
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                // DeleteAction::make()->usingField('slug'),
+                RevertableDeleteAction::make('slug')
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
+                ExportBulkAction::make('export')
             ]);
     }
 
@@ -126,6 +147,13 @@ class ProductResource extends Resource
             'index' => Pages\ListProducts::route('/'),
             'create' => Pages\CreateProduct::route('/create'),
             'edit' => Pages\EditProduct::route('/{record}/edit'),
+        ];
+    }
+
+    public static function getWidgets(): array
+    {
+        return [
+            ProductOverview::class,
         ];
     }
 }

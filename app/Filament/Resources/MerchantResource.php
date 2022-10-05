@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
 class MerchantResource extends Resource
 {
+    protected static ?string $navigationGroup = 'Filament Shield';
     protected static ?string $model = Merchant::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';

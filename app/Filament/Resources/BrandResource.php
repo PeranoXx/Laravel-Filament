@@ -9,6 +9,7 @@ use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
+use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -18,10 +19,17 @@ use Illuminate\Support\Str;
 
 class BrandResource extends Resource
 {
+    use Translatable;
     protected static ?string $navigationGroup = 'Shop';
     protected static ?string $model = Brand::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-tag';
+
+
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'es'];
+    }
 
     public static function form(Form $form): Form
     {
