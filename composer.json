@@ -6,6 +6,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "awcodes/filament-curator": "^0.6.1",
+        "bezhansalleh/filament-google-analytics": "^0.0.2",
         "bezhansalleh/filament-shield": "^2.2",
         "filament/filament": "^2.16",
         "filament/forms": "^2.16",
@@ -22,9 +24,12 @@
         "livewire/livewire": "^2.5",
         "maatwebsite/excel": "^3.1",
         "mohamedsabil83/filament-forms-tinyeditor": "^1.6",
+        "owen-it/laravel-auditing": "^13.0",
         "psr/simple-cache": "2.0",
         "pxlrbt/filament-excel": "^1.1",
+        "rahmanramsi/filament-editorjs": "^1.0",
         "spatie/laravel-settings": "^2.4",
+        "tapp/filament-auditing": "^1.2",
         "webbingbrasil/filament-advancedfilter": "^1.1"
     },
     "require-dev": {

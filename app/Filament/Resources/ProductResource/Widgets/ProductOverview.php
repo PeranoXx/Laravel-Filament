@@ -12,7 +12,7 @@ class ProductOverview extends BaseWidget
     {
         return [
             Card::make('Total Products', Product::count()),
-            Card::make('Average Price', Product::avg('amount')),
+            Card::make('Average Price', number_format(Product::avg('amount'),2)),
         ];
     }
 }

@@ -29,6 +29,8 @@ use Webbingbrasil\FilamentAdvancedFilter\Filters\BooleanFilter;
 use Webbingbrasil\FilamentAdvancedFilter\Filters\DateFilter;
 use Webbingbrasil\FilamentAdvancedFilter\Filters\NumberFilter;
 use Webbingbrasil\FilamentAdvancedFilter\Filters\TextFilter;
+use Tapp\FilamentAuditing\RelationManagers\AuditsRelationManager;
+use FilamentEditorJs\Forms\Components\EditorJs;
 
 class ProductResource extends Resource
 {
@@ -53,13 +55,14 @@ class ProductResource extends Resource
                             TextInput::make('name')->label('Product Name')->required()->unique(Product::class, 'slug', ignoreRecord: true)->reactive()->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
                             TextInput::make('slug')->unique(Product::class, 'slug', ignoreRecord: true)->required()->disabled(),
                         ]),
-                        RichEditor::make('description')->required()
+                        RichEditor::make('description')->required(),
+                        // EditorJs::make('description')
                     ]),
                     Section::make('Image')->schema([
-                        FileUpload::make('image')->required()
+                        FileUpload::make('image')->multiple()->required()
                     ])->columns(1),
 
-                    Section::make('pricing')->schema([
+                    Section::make('Pricing')->schema([
                         Grid::make()->schema([
                             TextInput::make('amount')->numeric()->label('Product Amount')->required()->default(0)->reactive()->afterStateUpdated(
                                 function ($state, Closure $get, callable $set) {
@@ -108,7 +111,7 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('image'),
+                // TextColumn::make('image'),
                 TextColumn::make('name')->searchable()->sortable(),
                 TextColumn::make('amount')->prefix('₹')->sortable(),
                 TextColumn::make('discount_amount')->prefix('₹')->sortable()->toggleable(),
@@ -137,7 +140,7 @@ class ProductResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            AuditsRelationManager::class,
         ];
     }
 

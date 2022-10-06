@@ -16,6 +16,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Support\Str;
+use Tapp\FilamentAuditing\RelationManagers\AuditsRelationManager;
 
 class BrandResource extends Resource
 {
@@ -70,6 +71,7 @@ class BrandResource extends Resource
     {
         return [
             ProductRelationManager::class,
+            AuditsRelationManager::class,
         ];
     }
 
