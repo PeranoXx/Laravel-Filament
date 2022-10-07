@@ -18,9 +18,9 @@ class ManageSite extends SettingsPage
     protected function getFormSchema(): array
     {
         return [
-            TextInput::make('site_name')
+            TextInput::make('site_name')->label(__('Site Name'))
                 ->required(),
-            FileUpload::make('site_logo')
+            FileUpload::make('site_logo')->label(__('Site Logo'))
                 ->avatar()->required()
         ];
     }

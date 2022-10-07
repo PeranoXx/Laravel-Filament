@@ -112,7 +112,7 @@ class ProductResource extends Resource
         return $table
             ->columns([
                 // TextColumn::make('image'),
-                TextColumn::make('name')->searchable()->sortable(),
+                TextColumn::make('name')->label(__('Product Name'))->searchable()->sortable(),
                 TextColumn::make('amount')->prefix('₹')->sortable(),
                 TextColumn::make('discount_amount')->prefix('₹')->sortable()->toggleable(),
                 TextColumn::make('discount')->suffix('%')->sortable()->toggleable(),

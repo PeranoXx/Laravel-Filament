@@ -11,8 +11,8 @@ class ProductOverview extends BaseWidget
     protected function getCards(): array
     {
         return [
-            Card::make('Total Products', Product::count()),
-            Card::make('Average Price', number_format(Product::avg('amount'),2)),
+            Card::make('Total Products', Product::count())->label(__('Total Products')),
+            Card::make('Average Price', number_format(Product::avg('amount'),2))->label(__('Average Price')),
         ];
     }
 }

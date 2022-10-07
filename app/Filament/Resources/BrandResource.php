@@ -37,8 +37,8 @@ class BrandResource extends Resource
         return $form->schema([
             Card::make()->schema([
                 Grid::make(2)->schema([
-                    TextInput::make('name')->label('Brand Name')->required()->unique(Brand::class, 'slug', ignoreRecord: true)->reactive()->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
-                    TextInput::make('slug')->unique(Brand::class, 'slug', ignoreRecord: true)->required()->disabled(),
+                    TextInput::make('name')->label(__('Brand Name'))->required()->unique(Brand::class, 'slug', ignoreRecord: true)->reactive()->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
+                    TextInput::make('slug')->label(__('Brand Slug'))->unique(Brand::class, 'slug', ignoreRecord: true)->required()->disabled(),
                 ]),
                 Grid::make(1)->schema([
                     TextInput::make('website')->activeUrl()->required(),
@@ -52,9 +52,9 @@ class BrandResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('slug')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('website')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('name')->label(__('Name'))->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('slug')->label(__('Slug'))->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('website')->label(__('Website'))->sortable()->searchable(),
             ])->defaultSort('created_at', 'desc')
             ->filters([
                 //

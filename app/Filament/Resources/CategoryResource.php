@@ -26,8 +26,8 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->label('Category Name')->required()->unique(Category::class, 'slug', ignoreRecord: true)->reactive()->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
-                TextInput::make('slug')->unique(Category::class, 'slug', ignoreRecord: true)->required()->disabled(),
+                TextInput::make('name')->label(__('Category Name'))->required()->unique(Category::class, 'slug', ignoreRecord: true)->reactive()->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
+                TextInput::make('slug')->label(__('Category slug'))->unique(Category::class, 'slug', ignoreRecord: true)->required()->disabled(),
             ]);
     }
 
@@ -35,8 +35,8 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('slug')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('name')->label(__('Category Name'))->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('slug')->label(__('Category Slug'))->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
             ])->defaultSort('created_at', 'asc')
@@ -48,7 +48,7 @@ class CategoryResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
-                ExportBulkAction::make('export')
+                ExportBulkAction::make('export')->label(__('Export'))
             ]);
     }
 

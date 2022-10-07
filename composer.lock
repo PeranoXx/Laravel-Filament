@@ -4,8 +4,120 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0cf5eb26082b81c91277d9e1e1001ea3",
+    "content-hash": "51cf6317b3c606eaf1dd5e23af455e65",
     "packages": [
+        {
+            "name": "0.0.0/composer-include-files",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hopeseekr-contribs/composer-include-files.git",
+                "reference": "0e77aa7a723ac7a32a6b4f4ce4666872a642e845"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hopeseekr-contribs/composer-include-files/zipball/0e77aa7a723ac7a32a6b4f4ce4666872a642e845",
+                "reference": "0e77aa7a723ac7a32a6b4f4ce4666872a642e845",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "ComposerIncludeFiles\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ComposerIncludeFiles\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Robertson",
+                    "email": "funkjedi@gmail.com"
+                },
+                {
+                    "name": "Theodore R. Smith",
+                    "email": "theodore@phpexperts.pro"
+                }
+            ],
+            "description": "Include files at a higher priority than autoload files. Useful for overriding Laravel helpers.",
+            "homepage": "https://github.com/funkjedi/composer-include-files",
+            "keywords": [
+                "autoload",
+                "composer"
+            ],
+            "support": {
+                "source": "https://github.com/hopeseekr-contribs/composer-include-files/tree/1.6.1"
+            },
+            "time": "2022-06-18T07:04:13+00:00"
+        },
+        {
+            "name": "3x1io/filament-translations",
+            "version": "v1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/3x1io/filament-translations.git",
+                "reference": "f4d44e5f973870d9d00795b2442eef10a49234ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/3x1io/filament-translations/zipball/f4d44e5f973870d9d00795b2442eef10a49234ae",
+                "reference": "f4d44e5f973870d9d00795b2442eef10a49234ae",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^2.9",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.10",
+                "spatie/laravel-translation-loader": "^2.7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "io3x1\\FilamentTranslations\\FilamentTranslationsProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "io3x1\\FilamentTranslations\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "3x1",
+                    "email": "info@3x1.io",
+                    "role": "CEO"
+                }
+            ],
+            "description": "Translations With DB & UI",
+            "homepage": "https://3x1.io",
+            "keywords": [
+                "filament",
+                "laravel",
+                "translations",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/3x1io/filament-translations/issues",
+                "source": "https://github.com/3x1io/filament-translations/tree/v1.1.6"
+            },
+            "time": "2022-06-06T18:20:48+00:00"
+        },
         {
             "name": "akaunting/laravel-money",
             "version": "3.1.2",
@@ -269,6 +381,83 @@
                 }
             ],
             "time": "2022-03-03T07:56:23+00:00"
+        },
+        {
+            "name": "bezhansalleh/filament-language-switch",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bezhanSalleh/filament-language-switch.git",
+                "reference": "05531c3b6439847b9abb37e3fd8d3131d16e71e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bezhanSalleh/filament-language-switch/zipball/05531c3b6439847b9abb37e3fd8d3131d16e71e9",
+                "reference": "05531c3b6439847b9abb37e3fd8d3131d16e71e9",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^2.0",
+                "illuminate/contracts": "^9.0",
+                "php": "^8.0|^8.1",
+                "spatie/laravel-package-tools": "^1.9.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.8",
+                "nunomaduro/collision": "^6.0",
+                "orchestra/testbench": "^7.0",
+                "pestphp/pest": "^1.21",
+                "pestphp/pest-plugin-laravel": "^1.1",
+                "phpunit/phpunit": "^9.5",
+                "spatie/laravel-ray": "^1.26"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BezhanSalleh\\FilamentLanguageSwitch\\FilamentLanguageSwitchServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BezhanSalleh\\FilamentLanguageSwitch\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bezhan Salleh",
+                    "email": "bezhan_salleh@yahoo.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Zero config Language Switch(Changer/Localizer) plugin for filamentphp admin",
+            "homepage": "https://github.com/bezhansalleh/filament-language-switch",
+            "keywords": [
+                "bezhanSalleh",
+                "filament-language-changer",
+                "filament-language-switch",
+                "filament-locale-changer",
+                "filament-localizer",
+                "filament-plugin",
+                "filamentphp",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/bezhanSalleh/filament-language-switch/issues",
+                "source": "https://github.com/bezhanSalleh/filament-language-switch/tree/1.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/bezhanSalleh",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-07-31T17:12:54+00:00"
         },
         {
             "name": "bezhansalleh/filament-shield",
@@ -564,6 +753,232 @@
                 }
             ],
             "time": "2022-08-10T22:54:19+00:00"
+        },
+        {
+            "name": "codezero/browser-locale",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codezero-be/browser-locale.git",
+                "reference": "a3fd02af7325a16cd7d8590f16cb29bd5ee9e221"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codezero-be/browser-locale/zipball/a3fd02af7325a16cd7d8590f16cb29bd5ee9e221",
+                "reference": "a3fd02af7325a16cd7d8590f16cb29bd5ee9e221",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0|^8.0"
+            },
+            "require-dev": {
+                "illuminate/support": "^5.5|^6.0|^7.0|^8.0|^9.0",
+                "mockery/mockery": "^1.3.3",
+                "phpunit/phpunit": "^6.0|^7.0|^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "CodeZero\\BrowserLocale\\Laravel\\BrowserLocaleServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CodeZero\\BrowserLocale\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Vermeyen",
+                    "email": "ivan@codezero.be"
+                }
+            ],
+            "description": "Get the most preferred locales from your visitor's browser.",
+            "keywords": [
+                "browser",
+                "country",
+                "detect",
+                "language",
+                "locale",
+                "php",
+                "website"
+            ],
+            "support": {
+                "issues": "https://github.com/codezero-be/browser-locale/issues",
+                "source": "https://github.com/codezero-be/browser-locale/tree/3.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/ivanvermeyen",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://ko-fi.com/ivanvermeyen",
+                    "type": "ko_fi"
+                }
+            ],
+            "time": "2022-02-19T11:20:11+00:00"
+        },
+        {
+            "name": "codezero/laravel-localized-routes",
+            "version": "2.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codezero-be/laravel-localized-routes.git",
+                "reference": "6e77ffda1e331874a4682e407c081dc998ee5be8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codezero-be/laravel-localized-routes/zipball/6e77ffda1e331874a4682e407c081dc998ee5be8",
+                "reference": "6e77ffda1e331874a4682e407c081dc998ee5be8",
+                "shasum": ""
+            },
+            "require": {
+                "0.0.0/composer-include-files": "^1.5",
+                "codezero/laravel-localizer": "^1.1",
+                "illuminate/support": "^5.6|^6.0|^7.0|^8.0|^9.0",
+                "php": "^7.1|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^3.6|^4.0|^5.0|^6.0|^7.0",
+                "phpunit/phpunit": "^7.0|^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "CodeZero\\LocalizedRoutes\\LocalizedRoutesServiceProvider"
+                    ]
+                },
+                "include_files": [
+                    "src/helpers.php"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "CodeZero\\LocalizedRoutes\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Vermeyen",
+                    "email": "ivan@codezero.be"
+                }
+            ],
+            "description": "A convenient way to set up, manage and use localized routes in a Laravel app.",
+            "keywords": [
+                "country",
+                "language",
+                "laravel",
+                "locale",
+                "localization",
+                "php",
+                "routes",
+                "routing",
+                "translation"
+            ],
+            "support": {
+                "issues": "https://github.com/codezero-be/laravel-localized-routes/issues",
+                "source": "https://github.com/codezero-be/laravel-localized-routes/tree/2.7.3"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/ivanvermeyen",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://ko-fi.com/ivanvermeyen",
+                    "type": "ko_fi"
+                }
+            ],
+            "time": "2022-07-14T10:40:44+00:00"
+        },
+        {
+            "name": "codezero/laravel-localizer",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codezero-be/laravel-localizer.git",
+                "reference": "4629882fd2491acb0883060e1129d349eb6cc40f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codezero-be/laravel-localizer/zipball/4629882fd2491acb0883060e1129d349eb6cc40f",
+                "reference": "4629882fd2491acb0883060e1129d349eb6cc40f",
+                "shasum": ""
+            },
+            "require": {
+                "codezero/browser-locale": "^3.0",
+                "illuminate/support": "^5.6|^6.0|^7.0|^8.0|^9.0",
+                "php": "^7.1|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^3.6|^4.0|^5.0|^6.0|^7.0",
+                "phpunit/phpunit": "^7.0|^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "CodeZero\\Localizer\\LocalizerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CodeZero\\Localizer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Vermeyen",
+                    "email": "ivan@codezero.be"
+                }
+            ],
+            "description": "Automatically detect and set an app locale that matches your visitor's preference.",
+            "keywords": [
+                "browser",
+                "cookie",
+                "country",
+                "detect",
+                "language",
+                "laravel",
+                "locale",
+                "localization",
+                "php",
+                "session"
+            ],
+            "support": {
+                "issues": "https://github.com/codezero-be/laravel-localizer/issues",
+                "source": "https://github.com/codezero-be/laravel-localizer/tree/1.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/ivanvermeyen",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://ko-fi.com/ivanvermeyen",
+                    "type": "ko_fi"
+                }
+            ],
+            "time": "2022-02-02T13:35:31+00:00"
         },
         {
             "name": "danharrin/date-format-converter",
@@ -1489,16 +1904,16 @@
         },
         {
             "name": "filament/filament",
-            "version": "v2.16.21",
+            "version": "v2.16.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/admin.git",
-                "reference": "0e7c307a14da1d1425c43f8eb0616290cb049b5b"
+                "reference": "bc88fffc39de8d29fa81775eab9407c03a060ae3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/admin/zipball/0e7c307a14da1d1425c43f8eb0616290cb049b5b",
-                "reference": "0e7c307a14da1d1425c43f8eb0616290cb049b5b",
+                "url": "https://api.github.com/repos/filamentphp/admin/zipball/bc88fffc39de8d29fa81775eab9407c03a060ae3",
+                "reference": "bc88fffc39de8d29fa81775eab9407c03a060ae3",
                 "shasum": ""
             },
             "require": {
@@ -1548,20 +1963,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-10-04T23:22:42+00:00"
+            "time": "2022-10-06T12:44:37+00:00"
         },
         {
             "name": "filament/forms",
-            "version": "v2.16.21",
+            "version": "v2.16.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/forms.git",
-                "reference": "dcbe7cee6469126e55ed04b2cda455aa359fc27c"
+                "reference": "96db13999cf05fe12e8b113ed0454ed03bf1c1d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/forms/zipball/dcbe7cee6469126e55ed04b2cda455aa359fc27c",
-                "reference": "dcbe7cee6469126e55ed04b2cda455aa359fc27c",
+                "url": "https://api.github.com/repos/filamentphp/forms/zipball/96db13999cf05fe12e8b113ed0454ed03bf1c1d1",
+                "reference": "96db13999cf05fe12e8b113ed0454ed03bf1c1d1",
                 "shasum": ""
             },
             "require": {
@@ -1606,20 +2021,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-10-04T23:22:38+00:00"
+            "time": "2022-10-06T12:44:41+00:00"
         },
         {
             "name": "filament/notifications",
-            "version": "v2.16.21",
+            "version": "v2.16.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/notifications.git",
-                "reference": "466ea57d8744f834e4c2bcf30bf66e7b82c41e89"
+                "reference": "52a596d9c1843aad31f19f7774caf15e70c6cc31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/notifications/zipball/466ea57d8744f834e4c2bcf30bf66e7b82c41e89",
-                "reference": "466ea57d8744f834e4c2bcf30bf66e7b82c41e89",
+                "url": "https://api.github.com/repos/filamentphp/notifications/zipball/52a596d9c1843aad31f19f7774caf15e70c6cc31",
+                "reference": "52a596d9c1843aad31f19f7774caf15e70c6cc31",
                 "shasum": ""
             },
             "require": {
@@ -1656,20 +2071,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-09-30T09:40:22+00:00"
+            "time": "2022-10-06T12:44:43+00:00"
         },
         {
             "name": "filament/spatie-laravel-settings-plugin",
-            "version": "v2.16.21",
+            "version": "v2.16.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/spatie-laravel-settings-plugin.git",
-                "reference": "ad770e0723e97a3e6304d56085eadc3700a28694"
+                "reference": "836e7c82d3b6c5b470f554e93ea49310eb15baaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/spatie-laravel-settings-plugin/zipball/ad770e0723e97a3e6304d56085eadc3700a28694",
-                "reference": "ad770e0723e97a3e6304d56085eadc3700a28694",
+                "url": "https://api.github.com/repos/filamentphp/spatie-laravel-settings-plugin/zipball/836e7c82d3b6c5b470f554e93ea49310eb15baaf",
+                "reference": "836e7c82d3b6c5b470f554e93ea49310eb15baaf",
                 "shasum": ""
             },
             "require": {
@@ -1703,20 +2118,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-09-30T09:40:30+00:00"
+            "time": "2022-10-06T12:44:39+00:00"
         },
         {
             "name": "filament/spatie-laravel-translatable-plugin",
-            "version": "v2.16.21",
+            "version": "v2.16.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/spatie-laravel-translatable-plugin.git",
-                "reference": "dc8b472d3ef6b86f7d5faed0475605da725c3b11"
+                "reference": "5a33d82b7992fca991b53445051c63d6dde38e03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/spatie-laravel-translatable-plugin/zipball/dc8b472d3ef6b86f7d5faed0475605da725c3b11",
-                "reference": "dc8b472d3ef6b86f7d5faed0475605da725c3b11",
+                "url": "https://api.github.com/repos/filamentphp/spatie-laravel-translatable-plugin/zipball/5a33d82b7992fca991b53445051c63d6dde38e03",
+                "reference": "5a33d82b7992fca991b53445051c63d6dde38e03",
                 "shasum": ""
             },
             "require": {
@@ -1749,20 +2164,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-09-30T09:40:22+00:00"
+            "time": "2022-10-06T12:44:36+00:00"
         },
         {
             "name": "filament/support",
-            "version": "v2.16.21",
+            "version": "v2.16.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/support.git",
-                "reference": "a6f4b2a0d63c9d01f05882d660abfdfc3df0703a"
+                "reference": "dfce82138d9e7895a31931f4017ef1257cb2eb38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/support/zipball/a6f4b2a0d63c9d01f05882d660abfdfc3df0703a",
-                "reference": "a6f4b2a0d63c9d01f05882d660abfdfc3df0703a",
+                "url": "https://api.github.com/repos/filamentphp/support/zipball/dfce82138d9e7895a31931f4017ef1257cb2eb38",
+                "reference": "dfce82138d9e7895a31931f4017ef1257cb2eb38",
                 "shasum": ""
             },
             "require": {
@@ -1799,20 +2214,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-10-04T16:16:45+00:00"
+            "time": "2022-10-06T12:44:43+00:00"
         },
         {
             "name": "filament/tables",
-            "version": "v2.16.21",
+            "version": "v2.16.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/tables.git",
-                "reference": "dbde0aef6854737eb0d2c74100a93b4355b2aa3f"
+                "reference": "dd07e789f766f61ed44775e262fbdb4e685b6a94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/tables/zipball/dbde0aef6854737eb0d2c74100a93b4355b2aa3f",
-                "reference": "dbde0aef6854737eb0d2c74100a93b4355b2aa3f",
+                "url": "https://api.github.com/repos/filamentphp/tables/zipball/dd07e789f766f61ed44775e262fbdb4e685b6a94",
+                "reference": "dd07e789f766f61ed44775e262fbdb4e685b6a94",
                 "shasum": ""
             },
             "require": {
@@ -1855,7 +2270,7 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-10-04T23:22:36+00:00"
+            "time": "2022-10-06T12:44:39+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -2641,16 +3056,16 @@
         },
         {
             "name": "jaybizzle/crawler-detect",
-            "version": "v1.2.111",
+            "version": "v1.2.112",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "d572ed4a65a70a2d2871dc5137c9c5b7e69745ab"
+                "reference": "2c555ce35a07a5c1c808cee7d5bb52c41a4c7b2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/d572ed4a65a70a2d2871dc5137c9c5b7e69745ab",
-                "reference": "d572ed4a65a70a2d2871dc5137c9c5b7e69745ab",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/2c555ce35a07a5c1c808cee7d5bb52c41a4c7b2f",
+                "reference": "2c555ce35a07a5c1c808cee7d5bb52c41a4c7b2f",
                 "shasum": ""
             },
             "require": {
@@ -2687,9 +3102,9 @@
             ],
             "support": {
                 "issues": "https://github.com/JayBizzle/Crawler-Detect/issues",
-                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.2.111"
+                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.2.112"
             },
-            "time": "2022-03-15T22:19:01+00:00"
+            "time": "2022-10-05T21:52:44+00:00"
         },
         {
             "name": "jenssegers/agent",
@@ -2776,16 +3191,16 @@
         },
         {
             "name": "konnco/filament-import",
-            "version": "1.2.3",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/konnco/filament-import.git",
-                "reference": "14812456ca73334f9813a995c88bde565e7c970c"
+                "reference": "a6601aad3874c52547f218706a90f6ba14dd528e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/konnco/filament-import/zipball/14812456ca73334f9813a995c88bde565e7c970c",
-                "reference": "14812456ca73334f9813a995c88bde565e7c970c",
+                "url": "https://api.github.com/repos/konnco/filament-import/zipball/a6601aad3874c52547f218706a90f6ba14dd528e",
+                "reference": "a6601aad3874c52547f218706a90f6ba14dd528e",
                 "shasum": ""
             },
             "require": {
@@ -2795,6 +3210,7 @@
                 "illuminate/support": "^9.0",
                 "maatwebsite/excel": "^3.1",
                 "php": "^8.0",
+                "psr/simple-cache": "^2.0",
                 "spatie/laravel-package-tools": "^1.9.2"
             },
             "require-dev": {
@@ -2839,9 +3255,9 @@
             ],
             "support": {
                 "issues": "https://github.com/konnco/filament-import/issues",
-                "source": "https://github.com/konnco/filament-import/tree/1.2.3"
+                "source": "https://github.com/konnco/filament-import/tree/1.2.4"
             },
-            "time": "2022-09-27T09:48:13+00:00"
+            "time": "2022-10-06T07:47:55+00:00"
         },
         {
             "name": "konnco/filament-safely-delete",
@@ -6995,6 +7411,76 @@
             "time": "2022-03-07T13:50:51+00:00"
         },
         {
+            "name": "spatie/laravel-translation-loader",
+            "version": "2.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-translation-loader.git",
+                "reference": "8c12c702af169c8133fa845a72bf8947ae4d442a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-translation-loader/zipball/8c12c702af169c8133fa845a72bf8947ae4d442a",
+                "reference": "8c12c702af169c8133fa845a72bf8947ae4d442a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/translation": "^6.0|^7.0|^8.0|^9.0",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0",
+                "phpunit/phpunit": "^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\TranslationLoader\\TranslationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\TranslationLoader\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Store your language lines in the database, yaml or other sources",
+            "homepage": "https://github.com/spatie/laravel-translation-loader",
+            "keywords": [
+                "database",
+                "db",
+                "i8n",
+                "language",
+                "laravel",
+                "laravel-translation-loader",
+                "spatie",
+                "translate"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/laravel-translation-loader/tree/2.7.4"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2022-02-23T18:25:49+00:00"
+        },
+        {
             "name": "spatie/temporary-directory",
             "version": "2.1.1",
             "source": {
@@ -7054,6 +7540,85 @@
                 }
             ],
             "time": "2022-08-23T07:15:15+00:00"
+        },
+        {
+            "name": "stichoza/google-translate-php",
+            "version": "v4.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stichoza/google-translate-php.git",
+                "reference": "ea96d2ca42af3e40890cd0ca043d1c3efb46f292"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stichoza/google-translate-php/zipball/ea96d2ca42af3e40890cd0ca043d1c3efb46f292",
+                "reference": "ea96d2ca42af3e40890cd0ca043d1c3efb46f292",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "guzzlehttp/guzzle": "~6.0|~7.0",
+                "php": "^7.1|^8"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stichoza\\GoogleTranslate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Levan Velijanashvili",
+                    "email": "me@stichoza.com"
+                }
+            ],
+            "description": "Free Google Translate API PHP Package",
+            "homepage": "http://github.com/Stichoza/google-translate-php",
+            "keywords": [
+                "google",
+                "php",
+                "translate",
+                "translator"
+            ],
+            "support": {
+                "issues": "https://github.com/Stichoza/google-translate-php/issues",
+                "source": "https://github.com/Stichoza/google-translate-php/tree/v4.1.6"
+            },
+            "funding": [
+                {
+                    "url": "https://btc.com/bc1qc25j4x7yahghm8nnn6lypnw59nptylsw32nkfl",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.paypal.me/stichoza",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://ko-fi.com/stichoza",
+                    "type": "ko_fi"
+                },
+                {
+                    "url": "https://liberapay.com/stichoza",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://opencollective.com/stichoza",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/stichoza",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2022-01-25T16:55:34+00:00"
         },
         {
             "name": "symfony/cache",
@@ -9549,16 +10114,16 @@
         },
         {
             "name": "tapp/filament-auditing",
-            "version": "v1.2",
+            "version": "v1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TappNetwork/filament-auditing.git",
-                "reference": "4cd0b8c27b598418ca69548828ff0a086aa7773e"
+                "reference": "8b3dfdf9ca9d963e615ddb2326b5ed81552925f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TappNetwork/filament-auditing/zipball/4cd0b8c27b598418ca69548828ff0a086aa7773e",
-                "reference": "4cd0b8c27b598418ca69548828ff0a086aa7773e",
+                "url": "https://api.github.com/repos/TappNetwork/filament-auditing/zipball/8b3dfdf9ca9d963e615ddb2326b5ed81552925f4",
+                "reference": "8b3dfdf9ca9d963e615ddb2326b5ed81552925f4",
                 "shasum": ""
             },
             "require": {
@@ -9598,7 +10163,7 @@
                 "issues": "https://github.com/TappNetwork/filament-auditing/issues",
                 "source": "https://github.com/TappNetwork/filament-auditing"
             },
-            "time": "2022-09-29T20:56:49+00:00"
+            "time": "2022-10-06T21:03:14+00:00"
         },
         {
             "name": "tgalopin/html-sanitizer",
