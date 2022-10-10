@@ -22,22 +22,22 @@ return [
     ],
 
     'active_users_one_day' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => false
     ],
 
     'active_users_seven_day' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => false
     ],
 
     'active_users_fourteen_day' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => false
     ],
 
     'active_users_twenty_eight_day' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => false
     ],
 
@@ -52,22 +52,22 @@ return [
     ],
 
     'sessions_by_country' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => false
     ],
 
     'sessions_by_device' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => false
     ],
 
     'most_visited_pages' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => false
     ],
 
     'top_referrers_list' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => false
     ],
 

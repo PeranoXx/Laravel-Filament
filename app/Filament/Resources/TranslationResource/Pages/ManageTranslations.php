@@ -67,7 +67,7 @@ class ManageTranslations extends ManageRecords
     public function autoTranslate(){
         try {
             Translate::dispatch();
-            Notification::make()->title('Language Translating Starts in Background!')->success()->send();
+            Notification::make()->title(__('Language Translating Starts in Background!'))->success()->send();
         } catch (\Exception $e) {
             Notification::make()->title($e->getMessage())->error()->send();
         }

@@ -31,6 +31,7 @@ use Webbingbrasil\FilamentAdvancedFilter\Filters\NumberFilter;
 use Webbingbrasil\FilamentAdvancedFilter\Filters\TextFilter;
 use Tapp\FilamentAuditing\RelationManagers\AuditsRelationManager;
 use FilamentEditorJs\Forms\Components\EditorJs;
+use Konnco\FilamentSafelyDelete\Tables\Actions\DeleteAction;
 
 class ProductResource extends Resource
 {
@@ -128,7 +129,7 @@ class ProductResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                // DeleteAction::make()->usingField('slug'),
+                DeleteAction::make()->label(__('Safe Delete'))->usingField('slug'),
                 RevertableDeleteAction::make('slug')
             ])
             ->bulkActions([

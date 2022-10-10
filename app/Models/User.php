@@ -70,4 +70,10 @@ class User extends Authenticatable implements FilamentUser
     public function hasAppliedForAuthor(){
         return $this->hasOne(ApplyForAuthor::class, 'user_id', 'id');
     }
+
+    public function hasEnabledFilamentTwoFactorAuthentication()
+    {
+        return ! is_null($this->two_factor_secret) &&
+            ! is_null($this->two_factor_confirmed_at);
+    }
 }
