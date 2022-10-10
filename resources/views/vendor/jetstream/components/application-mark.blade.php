@@ -4,4 +4,4 @@
 </svg> --}}
 {{-- {{storage_path().'/'. getSiteLogo()}} --}}
 
-<img src="{{'storage/'.getSiteLogo()}}" alt="" width="50" class="inline-block ring-white" >
+<img src="{{url('storage/'.getSiteLogo())}}" alt="" width="50" class="inline-block ring-white" >
