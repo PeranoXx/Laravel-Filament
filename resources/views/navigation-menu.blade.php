@@ -84,7 +84,7 @@
                             @if (Auth::user()->hasAnyRole(['super_admin', 'author']))
                                 <a href="{{ route('post.create') }}"
                                     class="hover:bg-indigo-500 hover:text-white py-2 px-4 rounded-md border border-indigo-500 text-indigo-500 ">
-                                    Create Post </a>
+                                    {{__('Create Post')}} </a>
                             @else
                             
                             @if (Auth::user()->hasAppliedForAuthor && Auth::user()->hasAppliedForAuthor->status == 'pending')
@@ -152,10 +152,10 @@
                         </div>
                     @else
                         <div class="flex gap-2">
-                            <a href="{{ route('login') }}" class="hover:bg-gray-200 py-2 px-4 rounded-md"> Login </a>
+                            <a href="{{ route('login') }}" class="hover:bg-gray-200 py-2 px-4 rounded-md"> {{__('Login')}} </a>
                             <a href="{{ route('register') }}"
                                 class="hover:bg-indigo-500 hover:text-white py-2 px-4 rounded-md border border-indigo-500 text-indigo-500 ">
-                                Create Account </a>
+                                {{__('Create Account')}} </a>
                         </div>
                     @endauth
                 </div>

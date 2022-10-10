@@ -7,7 +7,7 @@
                     <div class="flex gap-2">
                         <img class="h-12 w-12 rounded-full object-cover" src="{{ $post->user->profile_photo_url }}"
                             alt="{{ $post->user->name }}" />
-                        <div>
+                        <div class="overflow-x-auto list-disc">
                             <p>{{ $post->user->name }}</p>
                             <p class="text-xs">{{ date('d-M-Y', strtotime($post->published_at)) }}</p>
                             <div>

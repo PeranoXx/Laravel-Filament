@@ -12,6 +12,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Notifications\Notification;
+use FilamentEditorJs\Forms\Components\EditorJs;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Illuminate\Support\Str;
@@ -41,6 +42,7 @@ class PostForm extends Component implements HasForms
                     TextInput::make('slug')->unique()->disabled(),
                 ]),
             TinyEditor::make('content')->required(),
+            // EditorJs::make('content'),
             Grid::make(2)
                 ->schema([
                     Select::make('category_id')->required()

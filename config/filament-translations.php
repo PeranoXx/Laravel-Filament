@@ -36,13 +36,14 @@ return [
     | add the locals that will be show on the languages selector
     |
     */
-    "locals" => [
-        "en" => "English",
-        "es" => "Spanish"
-        // "ar" => "Arabic",
-        // "pt_BR" => "Português (Brasil)",
-        // "my" => "Burmese"
-    ],
+    // "locals" => [
+    //     "en" => "English",
+    //     "es" => "Spanish",
+    //     "ar" => "Arabic",
+    //     "pt_BR" => "Português (Brasil)",
+    //     "my" => "Burmese"
+    // ],
+    "locals" => config('app.locales'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +53,7 @@ return [
     | show switcher item on the navigation menu
     |
     */
-    "show-switcher" => true,
+    "show-switcher" => false,
 
     /*
     |--------------------------------------------------------------------------

@@ -15,6 +15,21 @@ class ManageSite extends SettingsPage
 
     protected static string $settings = SiteSettings::class;
 
+    protected function getTitle(): string
+    {
+        return static::$title ?? __('Manage Site');
+    }
+
+    protected static function getNavigationLabel(): string
+    {
+        return static::$navigationLabel ?? __('Manage Site');
+    }
+
+    protected static function getNavigationGroup(): ?string
+    {
+        return static::$navigationGroup ?? __('Setting');
+    }
+
     protected function getFormSchema(): array
     {
         return [

@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\CategoryResource\Pages;
 use App\Models\Category;
 use Filament\Forms\Components\TextInput;
+use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -16,11 +17,29 @@ use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
 
 class CategoryResource extends Resource
 {
-    protected static ?string $navigationGroup = 'Blog';
+    use Translatable;
+    protected static ?string $title = null;
+    protected static ?string $navigationGroup = NULL;
 
     protected static ?string $model = Category::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
+
+    protected static function getNavigationLabel(): string
+    {
+        return static::$navigationLabel ?? static::$title ?? __('Categories');
+    }
+
+    protected static function getNavigationGroup(): ?string
+    {
+        return static::$navigationGroup ?? __('Blog');
+    }
+
+
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'es'];
+    }
 
     public static function form(Form $form): Form
     {

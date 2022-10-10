@@ -5,7 +5,7 @@ return [
     /**
      * The locales you wish to support.
      */
-    'supported-locales' =>[ 'en', 'es'],
+    'supported-locales' =>config('app.locales'),
 
     /**
      * If you have a main locale and don't want

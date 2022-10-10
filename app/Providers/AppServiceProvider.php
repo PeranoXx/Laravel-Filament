@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Filament\Resources\TranslationResource\Pages\ManageTranslations;
 use Illuminate\Support\ServiceProvider;
+use io3x1\FilamentTranslations\Resources\TranslationResource\Pages\ManageTranslations as PagesManageTranslations;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->bind(PagesManageTranslations::class, ManageTranslations::class);
     }
 }

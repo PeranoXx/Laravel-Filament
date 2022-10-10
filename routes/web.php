@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::localized(function () {
+Route::get('/', function(){
+    return redirect()->route('dashboard');
+});
+Route::localized(function () {
     Route::get('/', [HomeController::class, 'index'])->name('dashboard');
     Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
         Route::group(['middleware' => ['role:super_admin|author']], function () {
@@ -25,4 +27,4 @@ use Illuminate\Support\Facades\Route;
         Route::get('/posts', [PostController::class, 'index'])->name('post.index');
         Route::get('/posts/{slug}', [PostController::class, 'get'])->name('post.get');
     });
-// });
+});
