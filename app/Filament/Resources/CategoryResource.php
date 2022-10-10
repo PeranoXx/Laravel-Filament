@@ -38,7 +38,7 @@ class CategoryResource extends Resource
 
     public static function getTranslatableLocales(): array
     {
-        return ['en', 'es'];
+        return config('app.locales');
     }
 
     public static function form(Form $form): Form
