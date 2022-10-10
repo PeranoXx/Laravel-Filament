@@ -30,6 +30,7 @@
             @endif
     
             <!-- Page Content -->
+            <x-tall-interactive::actionables-manager />
             <main>
                 <div class="py-12">
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">

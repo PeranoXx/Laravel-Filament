@@ -32,6 +32,7 @@
         "psr/simple-cache": "2.0",
         "pxlrbt/filament-excel": "^1.1",
         "rahmanramsi/filament-editorjs": "^1.0",
+        "ralphjsmit/tall-interactive": "^0.8.12",
         "spatie/laravel-settings": "^2.4",
         "stichoza/google-translate-php": "^4.1",
         "tapp/filament-auditing": "^1.2",
